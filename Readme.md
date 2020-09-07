@@ -1,7 +1,6 @@
 # Личный проект «Техномарт»
 
 * Студент: [Borys Odessa](https://up.htmlacademy.ru/htmlcss/29/user/1202789).
-* Наставник: `Неизвестно`.
 
 ---
 
