@@ -2,8 +2,8 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap
+  https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Каталог</title>
@@ -14,7 +14,7 @@
   <!--верхнее меню в хедере-->
 
   <div class="main-header-menu">
-    <a class="logo-link main-header-menu-link">
+    <a class="logo-link">
       <img src="https://via.placeholder.com" width="220" height="47" alt="Логотип Техномарт"></a>
     <a class="search main-header-menu-link" href="empty_page.html">Поиск</a>
     <a class="bookmarks main-header-menu-link" href="empty_page.html">Закладки:0</a>
@@ -51,58 +51,19 @@
     <li class="breadcrumbs-item"><a class="breadcrumbs-link">перфораторы</a></li>
   </ul>
   <h2 class="caption-drill-hammer">перфораторы</h2>
+
+    <!--фильтр-->
+
   <h3 class="caption-filter-toolbar">фильтр:</h3>
-
-
-  <!--написать fieldset-->
-
-  <!--
-  <h4 class="caption-drill-hammer-price">цена:</h4>
-  <div class="price-limiter">
-    <button class="price-limiter-range-handle-min"></button>
-    <button class="price-limiter-range-handle-max"></button>
-    <form class="price-limiter-value" action="">
-      <input class="price-limiter-value-min" type="number" name="min-price" value="0">
-      <input class="price-limiter-value-min" type="number" name="max-price" value="3000">
-    </form>
-  </div>
-  <h4 class="caption-manufacturers">производители:</h4>
-  <ul class="manufacturers-list">
-    <li class="manufacturers-item"><input type="checkbox" name="bosch" id="bosch" checked>
-      <label for="bosch">bosch</label></li>
-    <li class="manufacturers-item"><input type="checkbox" name="interskol" id="interskol">
-      <label for="interskol">интерскол</label></li>
-    <li class="manufacturers-item"><input type="checkbox" name="makita" id="makita" checked>
-      <label for="makita">makita</label></li>
-    <li class="manufacturers-item"><input type="checkbox" name="" id="dewalt">
-      <label for="dewalt">dewalt</label></li>
-    <li class="manufacturers-item"><input type="checkbox" name="" id="hitachi">
-      <label for="hitachi">hitachi</label></li>
-  </ul>
-  <form>
-    <h4 class="caption-power">питание:</h4>
-    <label>
-      <input class="power-accumulator" type="radio" name="power" value="аккумуляторные" checked>
-      <span class="power-accumulator-stylization">аккумуляторные</span>
-    </label>
-    <label>
-      <input class="power-network" type="radio" name="power" value="сетевые">
-      <span class="power-network-stylization">сетевые</span>
-    </label>
-
-
-    <input class="filter-result" type="submit" value="ПОКАЗАТЬ">
-  -->
-
   <form>
     <fieldset>
-      <legend class="caption-drill-hammer-price">цена:</legend>
+      <legend class="drill-hammer-price">цена:</legend>
       <div class="price-limiter">
-        <button class="price-limiter-range-handle-min"></button>
-        <button class="price-limiter-range-handle-max"></button>
+        <button class="price-limiter-min" type="button"></button>
+        <button class="price-limiter-max" type="button"></button>
         <form class="price-limiter-value" action="">
-          <input class="price-limiter-value-min" type="number" name="min-price" value="0">
-          <input class="price-limiter-value-min" type="number" name="max-price" value="3000">
+          <input class="price-value" type="number" name="min-price" value="0">
+          <input class="price-value" type="number" name="max-price" value="3000">
         </form>
       </div>
     </fieldset>
@@ -127,11 +88,11 @@
       <legend class="caption-power">питание:</legend>
       <label>
         <input class="power-accumulator" type="radio" name="power" value="аккумуляторные" checked>
-        <span class="power-accumulator-stylization">аккумуляторные</span>
+        <span class="power-stylization">аккумуляторные</span>
       </label>
       <label>
         <input class="power-network" type="radio" name="power" value="сетевые">
-        <span class="power-network-stylization">сетевые</span>
+        <span class="power-stylization">сетевые</span>
       </label>
 
       <input class="filter-result" type="submit" value="ПОКАЗАТЬ"> <!--как стилизуется value?-->
@@ -150,101 +111,100 @@
   <!--витрина отсортированных перфораторов-->
 
   <section class="sorting-display-drill-hammer">
-    <h3 class="caption-sorting-display-drill-hammer" hidden>витрина перфораторов</h3>
-    <ul class="sorting-display-drill-hammer-list">
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-          <p class="drill-hammer-model">Перфоратор <span class="model-letter">bfg</span> 6000</p>
-          <span class="drill-hammer-old-price">30500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">25500 р.</a>
+    <h3 class="caption-sorting-display" hidden>витрина перфораторов</h3>
+    <ul class="goods-list">
+      <li class="goods-item">
+        <article class="BOSCH-BFG-6000">
+          <img class="goods-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+          <p class="goods-model">Перфоратор <span class="model-letter">bfg</span> 6000</p>
+          <span class="old-price">30500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">25500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-          <p class="drill-hammer-model">Перфоратор bosch <span class="model-letter">bfg</span> 6000</p>
-          <span class="drill-hammer-old-price">30500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">25500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH-BFG-6000">
+          <img class="goods-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+          <p class="goods-model">Перфоратор bosch <span class="model-letter">bfg</span> 6000</p>
+          <span class="old-price">30500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">25500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
+      <li class="goods-item">
+        <article class="BOSCH-BFG-3000">
           <a class="buy-link" href="empty_page.html">купить</a>
           <a class="to-bookmarks" href="empty_page.html">в закладки</a>
-          <p class="drill-hammer-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
-          <span class="drill-hammer-old-price">30500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">25500 р.</a>
+          <p class="goods-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
+          <span class="old-price">30500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">25500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
-          <span class="drill-hammer-old-price">22500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">15500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH-BFG-3000">
+          <img class="goods-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
+          <span class="old-price">22500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">15500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор <span class="model-letter">bfg</span> 6000</p>
-          <span class="drill-hammer-old-price">30500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">25500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH-BFG-3000">
+          <img class="goods-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор <span class="model-letter">bfg</span> 6000</p>
+          <span class="old-price">30500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">25500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор <span class="model-letter">bfg</span> 2000</p>
-          <a class="drill-hammer-new-price" href="empty_page.html">12500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH BFG 3000">
+          <img class="goods-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор <span class="model-letter">bfg</span> 2000</p>
+          <a class="new-price main-button" href="empty_page.html">12500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
-          <span class="drill-hammer-old-price">22500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">15500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH-BFG-3000">
+          <img class="goods-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
+          <span class="old-price">22500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">15500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор bosch <span class="model-letter">bfg</span> 6000</p>
-          <span class="drill-hammer-old-price">30500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">25500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH-BFG-3000">
+          <img class="goods-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор bosch <span class="model-letter">bfg</span> 6000</p>
+          <span class="old-price">30500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">25500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор bosch <span class="model-letter">bfg</span> 2000</p>
-          <a class="drill-hammer-new-price" href="empty_page.html">12500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH BFG 3000">
+          <img class="goods-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор bosch <span class="model-letter">bfg</span> 2000</p>
+          <a class="new-price main-button" href="empty_page.html">12500 р.</a>
         </article>
       </li>
-
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
-          <span class="drill-hammer-old-price">22500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">15500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH BFG 3000">
+          <img class="goods-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор <span class="model-letter">bfg</span> 3000</p>
+          <span class="old-price">22500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">15500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор bosch <span class="model-letter">bfg</span> 6000</p>
-          <span class="drill-hammer-old-price">30500 р.</span>
-          <a class="drill-hammer-new-price" href="empty_page.html">25500 р.</a>
+      <li class="goods-item">
+        <article class="BOSCH BFG 3000">
+          <img class="goods-photo" src="#" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор bosch <span class="model-letter">bfg</span> 6000</p>
+          <span class="old-price">30500 р.</span>
+          <a class="new-price main-button" href="empty_page.html">25500 р.</a>
         </article>
       </li>
-      <li class="sorting-display-drill-hammer-item">
-        <article>
-          <img class="drill-hammer-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-          <p class="drill-hammer-model">Перфоратор bosch <span class="model-letter">bfg</span> 2000</p>
-          <a class="drill-hammer-new-price" href="empty_page.html">12500 р.</a>
+      <li class="goods-item">
+        <article class="Перфоратор BOSCH BFG 3000">
+          <img class="goods-photo" src="#" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          <p class="goods-model">Перфоратор bosch <span class="model-letter">bfg</span> 2000</p>
+          <a class="new-price main-button" href="empty_page.html">12500 р.</a>
         </article>
       </li>
     </ul>
