@@ -133,7 +133,7 @@ img{
 }
 /*  популярные товары*/
 
-.caption-popular-goods{
+.caption-popular{
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-black);
@@ -169,12 +169,6 @@ img{
 
 /*популярные производители*/
 
-.caption-popular-manufacturers{
-  font-size: 30px;
-  line-height: 30px;
-  color: var(--basic-black);
-  text-transform: uppercase;
-}
 .all-popular {
   font-size: 14px;
   line-height: 18px;
@@ -319,8 +313,6 @@ img{
   color: var(--basic-yellow);
 }
 .footer-developed-text{
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color:  var(--basic-white);
@@ -345,7 +337,7 @@ img{
   color: var(--dark-black);
 }
 
-/* filter */
+/* фильтр */
 
 .caption-drill-hammer{
   font-size: 30px;
