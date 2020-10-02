@@ -11,6 +11,7 @@
   --dark-yellow: #FFBF47;
   --basic-yellow: #FFD180;
   --light-yellow: #FFFFFF;
+  --transparent: rgba(0 0 0 100)
  }
 .page{
   background: #d0c0bb; /* времменно */
@@ -72,7 +73,6 @@ img{
   line-Height: 21px;
   color: var(--dark-black);
 }
-
 .my-orders{
   font-size: 16px;
   line-height: 18px;
@@ -128,6 +128,9 @@ img{
 .offer-catalog-link{
   color: var(--basic-white);
 }
+.offer-slider-arrow{
+  background-color: var(--transparent)  ;
+}
 .main-button{
   background-color: var(--basic-red);
 }
@@ -172,6 +175,7 @@ img{
 .all-popular {
   font-size: 14px;
   line-height: 18px;
+  color: var(--basic-white);
 }
 .manufacturer-picture{
   color: var(--basic-white);
