@@ -67,6 +67,7 @@ img {
   margin: 0 auto;
   width: 940px;
 }
+
 .header-content {
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
