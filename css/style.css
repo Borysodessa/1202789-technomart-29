@@ -343,7 +343,6 @@ img {
   font-size: 17px;
   line-height: 18px;
   color: var(--basic-grey);
-  text-decoration: line-through;
   text-transform: uppercase;
 }
 
@@ -716,7 +715,12 @@ img {
   line-height: 18px;
   color: var(--dark-black);
 }
-
+.filter-button{
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
 /*сортировка*/
 
 .caption-sorting {
@@ -765,7 +769,7 @@ img {
 /*номер страницы*/
 .page-number{
   display: grid;
-  grid-template-columns: min-content min-content min-content min-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .page-number-item {
   list-style: none;
