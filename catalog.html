@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap,
@@ -16,18 +16,23 @@
   <div class="main-header-menu-bar">
     <div class="main-header-menu container">
       <a href="index.html" class="logo-link">
-        <img alt="Логотип Техномарт" height="47" src="img/logo-technomart.svg" width="220">
+        <img alt="Логотип Техномарт" height="18" src="img/logo-technomart.svg" width="108">
       </a>
       <div class="main-header-inner">
-        <a class="main-header-menu-link" href="empty_page.html">Поиск</a>
+        <a class="main-header-menu-link search" href="empty_page.html">Поиск</a>
         <div class="main-header-link-inner">
-          <a class="main-header-menu-link" href="empty_page.html">Закладки: 0</a>
-          <a class="main-header-menu-link" href="empty_page.html">Корзина: 0</a>
-          <a class="main-header-menu-link" href="empty_page.html">Оформить заказ</a>
+          <a class="main-header-menu-link bookmarks" href="empty_page.html">Закладки: 0</a>
+          <a class="main-header-menu-link basket basket-in-catalog" href="empty_page.html">Корзина: 0</a>
+          <a class="main-header-menu-link order" href="empty_page.html">
+            Оформить заказ
+          </a>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- контент шапки -->
+
   <div class="container">
     <div class="header-content">
       <p class="online-store">Интернет-магазин  строительных материалов  и инструментов для ремонта</p>
@@ -35,23 +40,29 @@
         <a class="phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a>
         <address class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
       </div>
-      <div class="user-navigation-inner">
+      <div class="user-navigation-inner ">
         <a class="user-name" href="empty_page.html">Равшан Джамшутович</a>
-        <a class="my-orders" href="empty_page.html">Мои заказы</a>
-        <a class="personal-account" href="empty_page.html">Личный кабинет</a>
+        <div class="user-name-account">
+          <a class="my-orders" href="empty_page.html">Мои заказы</a>
+          <div class="round-point">
+          </div>
+          <a class="personal-account" href="empty_page.html">Личный кабинет</a>
+        </div>
       </div>
-
     </div>
+
+    <!-- главная навигация -->
+
     <nav class="main-navigation">
       <ul class="main-navigation-list">
         <li class="main-navigation-item">
-          <a class="main-navigation-link">Главная</a>
+          <a class="main-navigation-link" href="index.html">Главная</a>
         </li>
         <li class="main-navigation-item">
           <a class="main-navigation-link" href="empty_page.html">Компания</a>
         </li>
         <li class="main-navigation-item">
-          <a class="main-navigation-link" href="сatalog.html">Каталог</a>
+          <a class="main-navigation-link">Каталог</a>
         </li>
         <li class="main-navigation-item">
           <a class="main-navigation-link" href="empty_page.html">Новости</a>
@@ -65,8 +76,9 @@
       </ul>
     </nav>
   </div>
-
 </header>
+
+<!-- основное содержание -->
 
 <main>
   <div class="container">
@@ -87,20 +99,22 @@
     </ul>
     <h2 class="caption-drill-hammer">перфораторы</h2>
     <div class="sorting-filter">
-    <h3 class="caption-filter-toolbar">фильтр:</h3>
-    <!--сортировка-->
 
-    <div class="sorting">
-      <h3 class="caption-sorting">сортировка:</h3>
-      <ul class="sorting-list">
-        <li class="sorting-item"><a class="sorting-link sorting-link-active" href="empty_page.html">по цене</a>
-        </li>
-        <li class="sorting-item"><a class="sorting-link" href="empty_page.html">по типу</a>
-        </li>
-        <li class="sorting-item"><a class="sorting-link" href="empty_page.html">по функционалу</a>
-        </li>
-      </ul>
-    </div>
+      <h3 class="caption-filter-toolbar">фильтр:</h3>
+
+      <!--сортировка-->
+
+      <div class="sorting">
+        <h3 class="caption-sorting">сортировка:</h3>
+        <ul class="sorting-list">
+          <li class="sorting-item"><a class="sorting-link sorting-link-active" href="empty_page.html">по цене</a>
+          </li>
+          <li class="sorting-item"><a class="sorting-link" href="empty_page.html">по типу</a>
+          </li>
+          <li class="sorting-item"><a class="sorting-link" href="empty_page.html">по функционалу</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!--фильтр-->
@@ -248,22 +262,23 @@
       <li class="page-number-item"><a class="page-number-link" href="empty_page.html">3</a></li>
       <li class="page-number-item"><a class="page-number-link" href="empty_page.html">следующая</a></li>
     </ul>
+
+    <article class="perforators-story">
+      <h3 class="caption-drill-hammer-story">пара слов о перфораторах</h3>
+      <p class="drill-hammer-story">Перфоратор — универсальный строительный инструмент. Предназначен для
+        сверления
+        и
+        долбления отверстий в кирпиче,
+        бетоне и камне.
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+        дрели,
+        шуруповерта и отбойного молотка.
+        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+        ударная
+        дрель.
+      </p>
+    </article>
   </div>
-  <article class="perforators-story">
-    <h3 class="caption-drill-hammer-story">пара слов о перфораторах</h3>
-    <p class="drill-hammer-story">Перфоратор — универсальный строительный инструмент. Предназначен для
-      сверления
-      и
-      долбления отверстий в кирпиче,
-      бетоне и камне.
-      Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
-      дрели,
-      шуруповерта и отбойного молотка.
-      В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
-      ударная
-      дрель.
-    </p>
-  </article>
 </main>
 
 <!--подвал-->

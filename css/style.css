@@ -1,7 +1,8 @@
-
+﻿
 :root {
   --basic-white: #ffffff;
   --grey-white: #F3F7F9;
+  --grey: #B7BFC8;
   --dirty-white: #F1F5F7;
   --basic-red: #EE3643;
   --basic-grey: #A9A9A9;
@@ -14,6 +15,7 @@
   --light-yellow: #FFFFFF;
   --sky-blue: #3BBCE3;
   --purple: #DC91D8;
+  --green: #63A63E;
   --light-green: #8ED78F;
   --transparent: rgba(0 0 0 100);
 }
@@ -21,8 +23,7 @@
 .page {
   height: 100%;
 }
-
-.page a {
+ .page-body a {
   text-decoration: none;
 }
 
@@ -42,16 +43,19 @@ img {
   color: var(--basic-white);
   font-weight: 400;
   font-style: normal;
-
 }
 
 /* шапка */
+
 .main-header-menu-bar {
   background-color: var(--black-light);
+  height: 42px;
+  margin-bottom: 46px;
 }
 
 .main-header {
   background-color: var(--dirty-white);
+  padding-bottom: 60px;
 }
 
 .container {
@@ -59,28 +63,32 @@ img {
   margin: 0 auto;
 }
 
-.main-header-menu {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0 auto;
-  width: 940px;
+          /* верх шапки--> */
+
+.logo-link{
+  width: 108px;
+  height: 18px;
+  padding: 12px 56px 17px;
+  position: absolute;
+  background-image: url("img/logo-bg-image.jpg");
 }
 
 .main-header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  outline: red 1px solid;
-  outline-offset: -1px;
+  flex-wrap: wrap;
   padding: 0;
-  margin: 0;
-  width: 100%;
+  margin-left: 220px;
+  width: 720px;
+  height: 42px;
 }
 
-.main-header-menu a {
-  outline: #F1F5F7 1px solid;
-  outline-offset: -1px;
+.main-header-link-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-content {
@@ -91,23 +99,113 @@ img {
 
 .main-header-menu-link {
   color: var(--basic-white);
+  display: block;
+  padding-bottom: 9px;
+  padding-top: 9px;
+}
+
+.search{
+  padding-left: 43px;
+  padding-right: 43px;
+  position: relative;
+}
+
+.search::before{
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-image: url("img/icon-search.svg");
+  background-repeat: no-repeat;
+  left: 17px;
+  top: 10px;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.order{
+  padding-right: 17px;
+  padding-left: 17px;
+  background-color: var(--green);
+}
+
+.basket{
+  padding-right: 26px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.basket::before{
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url("img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 1px;
+  top: 12px;
+  opacity: 0.3;
+}
+
+.bookmarks{
+  padding-left: 26px;
+  padding-right: 32px;
+  position: relative;
+}
+
+.bookmarks::before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 16px;
+  background-image: url("img/Shape.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 2px;
+  top: 12px;
+  opacity: 0.3;
+}
+
+  /* контент шапки */
+
+.header-content{
+  margin-bottom: 40px;
 }
 
 .online-store {
   font-size: 16px;
   line-height: 23px;
-  font-style: italic;
+  font-style: normal;
   color: var(--basic-red);
-  outline: #3BBCE3 1px solid;
   max-width: 197px;
+  margin: 0;
+  padding: 0;
 }
 
 .phone {
+  display: block;
   color: var(--basic-red);
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
-  outline: #3BBCE3 1px solid;
+  padding-left: 60px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  border: 3px var(--basic-white) solid;
+  position: relative;
+}
+
+.phone::before{
+  content:"";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background-image: url("img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 35px;
+  top: 12px
 }
 
 .address {
@@ -115,34 +213,96 @@ img {
   line-height: 24px;
   color: var(--basic-black);
   font-style: normal;
-  outline: #3BBCE3 1px solid;
 }
 
 .user-navigation {
   font-size: 21px;
   line-Height: 21px;
   color: var(--dark-black);
-  outline: #3BBCE3 1px solid;
+  background-color: var(--basic-white);
+}
+
+.sign-in{
+  padding: 12px 27px 12px 45px ;
+  position: relative;
+}
+
+.sign-in::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 17px;
+  background-image: url("img/icon-login.svg");
+  left: 20px;
+  top: 16px;
+}
+
+.registration{
+ padding: 12px 24px;
+  margin-left: 10px;
 }
 
 /*в каталоге*/
+.basket-in-catalog{
+  background-color: var(--basic-red);
+}
 
 .user-name {
   font-size: 21px;
   line-Height: 21px;
   color: var(--dark-black);
+  padding: 12px 56px 12px 57px;
+  background-color: var(--basic-white);
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.user-name::after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  background-image: url("img/icon-exit.svg");
+  background-position: 0 0;
+  top: 14px;
+  right: 20px;
+  background-repeat: no-repeat;
+}
+
+.user-name::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  background-image: url("img/icon-user.svg");
+  background-position: 0 0;
+  top: 13px;
+  left: 20px;
+  background-repeat: no-repeat;
 }
 
 .my-orders {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-black);
+  margin-left: 34px;
+  margin-right: 13px;
+}
+
+.round-point{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--basic-black);
+  display: inline-block;
 }
 
 .personal-account {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-black);
+  margin-left: 13px;
 }
 
 /*главная навигация*/
@@ -156,6 +316,7 @@ img {
 .main-navigation-list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -166,12 +327,18 @@ img {
 
 .main-navigation-link {
   color: var(--basic-white);
+  display: block;
+  padding: 12px;
 }
 
 /*main*/
 
 .container {
   width: 940px;
+}
+
+.offer{
+  padding-top: 60px;
 }
 
 .offer-list {
@@ -181,16 +348,22 @@ img {
   margin: 0;
   padding: 0;
 }
+
 .offer-list :last-child{
   margin-right:0;
 }
+
 .offer-item{
   width: 100%;
   margin-right: 20px;
   margin-bottom: 20px;
   padding-top: 25px;
 }
+
 .discounts-and-delivery{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   order: 3;
   margin-top: 0;
   margin-left: 20px;
@@ -202,6 +375,7 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+
 .offer-slider {
   margin: 0;
   padding: 0;
@@ -217,22 +391,9 @@ img {
   background-repeat: no-repeat;
 }
 
-.offer-slide-picture {
-  width: 620px;
-  height: 266px;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row: 1;
-}
-
 .all-popular-goods{
   display: flex;
   justify-content: space-between;
-}
-
-.perforators-and-drill {
-  grid-column: 1;
-  grid-row: 1;
 }
 
 .drils {
@@ -442,7 +603,6 @@ order:3;
 
 /*services slider*/
 
-
 .services-name {
   font-weight: 700;
   font-size: 21px;
@@ -468,6 +628,7 @@ order:3;
   background-image: url("img/delivery.png");
   background-repeat: no-repeat;
 }
+
 .warranty-text{
   width: 285px;
   height: 122px;
