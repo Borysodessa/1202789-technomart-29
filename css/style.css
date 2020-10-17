@@ -18,6 +18,7 @@
   --green: #63A63E;
   --light-green: #8ED78F;
   --transparent: rgba(0 0 0 100);
+  --light-beige: #F9F5F0;
 }
 
 .page {
@@ -345,7 +346,7 @@ img {
   width: 100%;
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 60px;
   padding: 0;
 }
 
@@ -394,6 +395,7 @@ img {
 .all-popular-goods{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .drils {
@@ -426,7 +428,7 @@ img {
 }
 
 .discounts {
-order:3;
+  order:3;
   background-color: var(--light-green);
 }
 
@@ -652,10 +654,6 @@ order:3;
   line-height: 24px;
   color: var(--dark-black);
 }
-.services-delivery{
-
-
-}
 
 .services-credit-link {
   font-size: 14px;
@@ -791,9 +789,12 @@ order:3;
   color: var(--basic-white);
 }
 
+/* социальнные кнопки*/
+
 .footer-social-list {
   list-style: none;
-
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer-feedback-text {
