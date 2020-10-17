@@ -46,6 +46,10 @@ img {
   font-style: normal;
 }
 
+.main-button {
+  background-color: var(--basic-red);
+  border: none;
+}
 /* шапка */
 
 .main-header-menu-bar {
@@ -392,16 +396,19 @@ img {
   background-repeat: no-repeat;
 }
 
-.all-popular-goods{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
 .drils {
   background-image: url("img/photo-drill.jpg");
   background-size: 620px 266px;
   background-repeat: no-repeat;
+}
+
+  /* популярные товары */
+
+.popular{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: var(--light-beige);
 }
 
 .offer-name {
@@ -465,9 +472,7 @@ img {
   background-color: var(--transparent);
 }
 
-.main-button {
-  background-color: var(--basic-red);
-}
+
 
 /*  популярные товары*/
 
@@ -493,8 +498,11 @@ img {
   list-style: none;
   display: flex;
   align-content: center;
-  margin: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 70px 0;
   padding: 0;
+
   outline: red 5px solid ;
   outline-offset: -5px;
 }
@@ -543,6 +551,8 @@ img {
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
+  width: 192px;
+  height: 38px
 }
 
 .popular-manufacturers-list {
@@ -1016,15 +1026,9 @@ img {
   color: var(--dark-black);
 }
 
-.goods-list{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 .sorting-list:nth-child(2+n){
   margin-right: 0;
 }
-
 
 /*номер страницы*/
 
