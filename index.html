@@ -82,70 +82,87 @@
     <h1 class="title-online-store" hidden>Интернет магазин "Техномарт"</h1>
     <section class="offer">
       <h2 class="caption-offer" hidden>Предложения</h2>
-      <div class="offers-and-slider">
-        <ul class="offer-list">
-          <li class="offer-item materials">
+      <ul class="offer-list">
+        <li class="offer-item materials">
+          <div class="offer-name-link">
             <p class="offer-name">Материалы</p>
             <a class="offer-link materials-link" href="empty_page.html">на любой вкус</a>
+          </div>
+          <div class="offer-pic-inner">
             <img class="material-pic" height="65px" src="img/icon-materials.svg" width="44px" alt="">
-          </li>
-          <li class="offer-item tools">
+          </div>
+        </li>
+        <li class="offer-item tools">
+          <div class="offer-name-link">
             <p class="offer-name tools">Инструмент</p>
             <a class="offer-link tools-link" href="empty_page.html">на все случаи</a>
-            <img alt="" class="material-pic" height="61px" src="img/icon-tools.svg" width="75px">
-          </li>
-          <li class="offer-item technics">
+          </div>
+          <div class="offer-pic-inner">
+            <img alt="" class="tools-pic" height="61px" src="img/icon-tools.svg" width="75px">
+          </div>
+        </li>
+        <li class="offer-item technics">
+          <div class="offer-name-link">
             <p class="offer-name">Техника</p>
             <a class="offer-link technics-link" href="empty_page.html">для стройки</a>
-            <img alt="" class="material-pic" height="62px" src="img/icon-technics.svg" width="78px">
-          </li>
-        </ul>
-        <ul class="discounts-and-delivery">
-          <li class="offer-item discounts">
+          </div>
+          <div class="offer-pic-inner">
+            <img alt="" class="technics-pic" height="62px" src="img/icon-technics.svg" width="78px">
+          </div>
+        </li>
+        <li class="offer-item discounts">
+          <div class="offer-name-link">
             <p class="offer-name">Скидки 50%</p>
             <a class="offer-link discounts-link" href="empty_page.html">на 350 товаров</a>
-            <img alt="" class="material-pic" height="72px" src="img/icon-discounts.svg" width="59px">
-          </li>
-          <li class="offer-item delivery">
+          </div>
+          <div class="offer-pic-inner">
+            <img alt="" class="discounts-pic" height="72px" src="img/icon-discounts.svg" width="59px"></div>
+        </li>
+        <li class="offer-item delivery">
+          <div class="offer-name-link">
             <p class="offer-name">Доставка</p>
             <a class="offer-link delivery-link" href="empty_page.html">бесплатно</a>
-            <img alt="" class="material-pic" height="63px" src="img/icon-delivery.svg" width="78px">
-          </li>
-        </ul>
-
+          </div>
+          <div class="offer-pic-inner">
+            <img alt="" class="delivery-pic" height="63px" src="img/icon-delivery.svg" width="78px">
+          </div>
+        </li>
 
         <!-- cлайдер перфораторы-->
 
-        <ul class="offer-slider">
-          <li class="offer-slider-item perforators">
-            <div class="perforators-and-drill perforators-text ">
-              <p class="offer-slide-name">перфораторы</p>
-              <p class="offer-slide-text">Настоящие мужские игрушки</p>
-            </div>
-            <a class="offer-catalog-link main-button" href="empty_page.html">открыть каталог</a>
-          </li>
-          <li class="offer-slider-item drils" hidden>
-            <div class="perforators-and-drill">
-              <p class="offer-slide-name">дрели</p>
-              <p class="offer-slide-text">Соседям на радость</p>
-            </div>
-            <a class="offer-catalog-link main-button" href="empty_page.html">открыть каталог</a>
-          </li>
-        </ul>
-        <div class="offer-slider-arrows " hidden>
-          <button class="offer-slider-arrow left" type="button">
+        <li class="slider-drill-hammer">
+          <ul class="offer-slider">
+            <li class="offer-slider-item perforators slide-current">
+              <div class="perforators-and-drill perforators-text ">
+                <p class="offer-slide-name">перфораторы</p>
+                <p class="offer-slide-text">Настоящие мужские игрушки</p>
+              </div>
+              <a class="offer-catalog-link main-button" href="empty_page.html">открыть каталог</a>
+              <button class="offer-slider-control slide-left-perforators" type="button" aria-label="слайд перфораторы"></button>
+              <button class="offer-slider-control slide-right-perforators" type="button" aria-label="слайд дрели"></button>
+            </li>
+            <li class="offer-slider-item drills" >
+              <div class="perforators-and-drill">
+                <p class="offer-slide-name">дрели</p>
+                <p class="offer-slide-text">Соседям на радость</p>
+              </div>
+              <a class="offer-catalog-link main-button" href="empty_page.html">открыть каталог</a>
+              <button class="offer-slider-control slide-left-drill" type="button" aria-label="слайд перфораторы"></button>
+              <button class="offer-slider-control slide-right-drill" type="button" aria-label="слайд дрели"></button>
+            </li>
+          </ul>
+          <button class="offer-slider-arrow left-arrow" type="button">
             <img alt="левая стрелка слайдера" height="40" src="img/icon-left-arrow.svg" width="22">
           </button>
-          <button class="offer-slider-arrow right" type="button">
+          <button class="offer-slider-arrow right-arrow" type="button">
             <img alt="правая стрелка слайдера" height="40" src="img/icon-right-arrow.svg" width="22">
           </button>
-        </div>
-      </div>
+      </ul>
     </section>
 
     <!--популярные товары-->
 
-    <section class="popular-goods">
+    <section class="popular-goods ">
       <div class="all-popular-goods popular">
         <h2 class="caption-popular">популярные товары:</h2>
         <button class="all-popular main-button" type="button">все популярные товары</button>
@@ -203,7 +220,7 @@
     <section class="popular-manufacturers">
       <div class="all-popular-manufactures popular">
         <h2 class="caption-popular">популярные производители:</h2>
-        <button class="all-popular main-button" type="button">все производители</button>
+        <button class="all-popular manufacturers-button main-button" type="button">все производители</button>
       </div>
       <ul class="popular-manufacturers-list">
         <li class="popular-manufacturers-item">
@@ -267,7 +284,7 @@
 
       <div class="services-slider">
         <div class="services-slider-inner">
-          <div>
+          <div class="services-slider-buttons">
             <button class="services-slider-btn services-btn-active" type="button">Доставка</button>
             <button class="services-slider-btn" type="button">Гарантия</button>
             <button class="services-slider-btn" type="button">Кредит</button>

@@ -2,10 +2,13 @@
 :root {
   --basic-white: #ffffff;
   --grey-white: #F3F7F9;
+  --transparent-white: rgba(255, 255, 255, 0.3);
+
   --grey: #B7BFC8;
   --dirty-white: #F1F5F7;
   --basic-red: #EE3643;
   --basic-grey: #A9A9A9;
+  --light-grey: #F2F6F8;
   --black-light: #293449;
   --basic-black: #32425C;
   --dark-black: #000000;
@@ -308,22 +311,27 @@ img {
   line-height: 18px;
   color: var(--basic-black);
   margin-left: 34px;
-  margin-right: 13px;
+  padding-right: 29px;
+  position: relative;
+
 }
 
-.round-point{
+.my-orders::after{
+  content:"";
+  position: absolute;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: var(--basic-black);
-  display: inline-block;
+  right: 10px;
+  top: 6px;
 }
 
 .personal-account {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-black);
-  margin-left: 13px;
+  margin: 0;
 }
 
 /*главная навигация*/
@@ -362,12 +370,14 @@ img {
  /* предложения */
 
 .offer{
-  margin-bottom: 20px;
+  margin-bottom: 39px;
 }
 
 .offer-list {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -378,64 +388,18 @@ img {
 }
 
 .offer-item{
-  height: 98px;
+  display: flex;
+  justify-content: space-between;
+  height: 123px;
   width: 300px;
   margin-right: 20px;
   margin-bottom: 20px;
-  padding-top: 25px;
-}
-
-.discounts-and-delivery{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  order: 3;
-  margin-top: 0;
-  margin-left: 20px;
-  padding: 0;
-  width: 300px;
-}
-
-.offers-and-slider{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.offer-slider {
-  margin: 0;
-  padding: 0;
-}
-
-.offer-slider-item {
-  margin: 0;
-  padding: 0;
-  height: 266px;
-  width: 620px;
-  background-image: url("img/photo-drill-hammer.jpg");
-  background-size: 620px 266px;
-  background-repeat: no-repeat;
-}
-
-.drils {
-  background-image: url("img/photo-drill.jpg");
-  background-size: 620px 266px;
-  background-repeat: no-repeat;
-}
-
-
-.offer-name {
-  font-size: 24px;
-  line-height: 24px;
-  color: var(--basic-white);
-  margin: 0;
-}
-
-.offer-link {
-  color: var(--basic-white);
+  padding-top: 0;
 }
 
 .materials {
   background-color: var(--dark-yellow);
+
 }
 
 .tools {
@@ -452,12 +416,105 @@ img {
 }
 
 .delivery {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
   background-color: var(--little-dark-yellow);
 }
 
+.offer-name {
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--basic-white);
+  margin:  26px 0 15px 22px;
+}
+
+.offer-link {
+  margin-bottom: 20px;
+  color: var(--basic-white);
+  width: 135px;
+  display: inline-block;
+  margin-left: 23px;
+  border: 1px var(--transparent-white) solid;
+  background-color: var(--transparent-white);
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.offer-pic-inner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-pic{
+  width: 44px;
+  height: 65px;
+}
+
+.tools-pic{
+  width: 75px;
+  height: 61px;
+}
+
+.technics-pic{
+  width: 78px;
+  height: 62px;
+}
+
+.discounts-pic{
+  width: 59px;
+  height: 72px;
+}
+
+.delivery-pic{
+  width: 78px;
+  height: 63px;
+}
+
+    /* слайдер */
+
+.offer-slider {
+  margin: 0;
+  padding: 0;
+}
 
 .offer-slider-item {
+  margin: 0 0 0 0;
+  padding-top: 20px;
+  padding-left: 24px;
+  height: 266px;
+  width: 620px;
+  background-image: url("img/photo-drill-hammer.jpg");
+  background-size: 620px 266px;
+  background-repeat: no-repeat;
   list-style: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  display: none;
+}
+
+.slide-current{
+  display: block;
+}
+
+.drills {
+  background-image: url("img/photo-drill.jpg");
+  background-size: 620px 266px;
+  background-repeat: no-repeat;
+}
+
+.slider-drill-hammer{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  position: relative;
 }
 
 .offer-slide-name {
@@ -471,16 +528,69 @@ img {
 
 .offer-slide-text {
   color: var(--basic-white);
+  text-transform: none;
+  font-weight: 400;
+ margin-top: 5px;
+  margin-bottom: 103px;
 }
 
 .offer-catalog-link {
+  font-size: 14px;
+  line-height: 18px;
+  width: 100px;
+  height: 28px;
   color: var(--basic-white);
+  padding: 9px 43px 0;
+  position: absolute;
+  bottom: 58px;
 }
 
-.offer-slider-arrow {
+.offer-slider-arrow{
+  position: absolute;
+  top: 122px;
   background-color: var(--transparent);
+  border: none;
+
 }
 
+.right-arrow{
+  right: 35px;
+}
+
+.left-arrow{
+  left: 15px
+}
+
+.offer-slider-control{
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: var(--basic-white) 2px solid;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 60px;
+
+}
+
+.slide-left-perforators{
+  left: 295px;
+  background-color: var(--basic-white);
+}
+
+.slide-right-perforators{
+  right: 315px;
+  background-color: var(--basic-red);
+}
+
+.slide-left-drill{
+  background-color: var(--basic-red);
+  left: 295px;
+}
+
+.slide-right-drill{
+  right: 315px;
+  background-color: var(--basic-white);
+}
 /*  популярные товары*/
 
 .popular{
@@ -491,7 +601,7 @@ img {
 }
 
 .all-popular-goods{
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 }
 
 .all-popular {
@@ -515,7 +625,7 @@ img {
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
-  margin-left: 28px;
+  margin-left: 27px;
   display: block;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -539,9 +649,15 @@ img {
 .goods-list :last-child{
   margin-right: 0;
 }
+.sorting-list :nth-child(3n){
+  margin-right: 0;
+  margin-left: 0;
+}
 
 .goods-item{
   border: var(--beige) 1px solid;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .goods-card{
@@ -557,7 +673,7 @@ img {
   height: 178px;
   justify-content: center;
   align-items: center;
-  background-color: #DC91D8;
+
 }
 
 .bfg-9000{
@@ -627,18 +743,21 @@ img {
 .all-popular-manufactures {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
+.manufacturers-button{
+  margin-right: 19px;
+}
 
 .popular-manufacturers-list {
   list-style: none;
   color: var(--basic-white);
-  margin: 0;
+  margin: 0 0 50px 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .popular-manufacturers-list :nth-child(n+4){
@@ -669,38 +788,46 @@ img {
 }
 
 .caption-services {
+  display: inline-block;
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
   color: var(--dark-black);
-  display: inline-block;
   margin-top: 64px;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
 
 .services-text {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
   color: var(--dark-black);
-  width: 394px;
-  margin-bottom: 70px;
+  width: 390px;
+  margin-bottom: 68px;
+  margin-top: 0;
 }
 
 /*services slider*/
 
 .services-name {
   font-weight: 700;
-  font-size: 21px;
+  font-size: 30px;
   line-height: 30px;
   color: var(--basic-black);
-  margin: 0;
+  margin: 0 0 0 15px;
   padding: 0;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .services-slider-inner{
   display: flex;
   justify-content: flex-start;
+}
+.services-slider-buttons{
+  margin-top: 5px;
 }
 
 .services-slider-list {
@@ -710,6 +837,7 @@ img {
 
 .services-slider-item{
   list-style: none;
+
 }
 
 .services-delivery {
@@ -758,6 +886,8 @@ img {
   display: inline-block;
   width: 240px;
   height: 61px;
+  border: 1px var(--basic-black) solid;
+  padding: 0;
 }
 
 .services-btn-active {
@@ -944,13 +1074,40 @@ img {
 /* фильтр */
 
 .caption-drill-hammer {
+  font-weight: 400;
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--light-grey);
+  margin-bottom: 20px;
+  padding-top: 29px;
+  padding-bottom: 30px;
 }
 
 .filter{
   width: 220px;
+  margin-right: 20px;
+}
+
+.sorting {
+   display: flex;
+   justify-content: space-between;
+  align-items: center;
+   outline: #3BBCE3 1px solid;
+   outline-offset: -1px;
+ }
+
+.caption-filter-toolbar {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--dark-black);
+  padding: 10px 151px 10px 18px;
+  background-color: var(--light-beige);
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .filter-sort-manufactures {
@@ -959,6 +1116,7 @@ img {
 }
 
 .filter-price{
+  width: 220px;
   padding: 0;
   border: none;
 }
@@ -971,14 +1129,6 @@ img {
   border: none;
 }
 
-.sorting {
-  display: flex;
-  justify-content: space-between;
-  outline: #3BBCE3 3px solid;
-  outline-offset: -3px;
-  width: 100%;
-}
-
 .sorting-filter {
   display: flex;
   justify-content: space-between;
@@ -987,17 +1137,8 @@ img {
 .sorting-list{
   display: flex;
   justify-content: space-between;
-  width: 100%;
-}
-.sorting-list :nth-child(n+2){
-  margin-right: 0;
-}
-.caption-filter-toolbar {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
-  color: var(--dark-black);
+  margin: 0;
+  padding: 0;
 }
 
 .drill-hammer-price {
@@ -1015,6 +1156,7 @@ img {
   font-size: 17px;
   line-height: 18px;
   color: var(--dark-black);
+  width: 180px;
 }
 
 .caption-manufacturers {
@@ -1070,10 +1212,16 @@ img {
   font-size: 13px;
   line-height: 18px;
   color: var(--dark-black);
+  padding-left: 19px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .sorting-item {
   list-style: none;
+  display: inline-block;
+  padding: 10px 35px;
+  margin: 0;
 }
 
 .sorting-link {
@@ -1082,6 +1230,7 @@ img {
   font-size: 13px;
   line-height: 18px;
   color: var(--dark-black);
+  text-transform: uppercase;
 }
 
 .sorting-link-active {
@@ -1106,15 +1255,15 @@ img {
   color: var(--dark-black);
 }
 
-.sorting-list:nth-child(2+n){
-  margin-right: 0;
-}
+
 
 /*номер страницы*/
 
 .page-number {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  outline: #EE3643 1px solid;
 }
 
 .page-number-item {
@@ -1149,7 +1298,10 @@ img {
   margin: 0;
   padding: 0;
 }
+.perforators-story-background{
+  background-color: var(--dirty-white);
+}
 
 .perforators-story {
-  background-color: var(--dirty-white);
+
 }
