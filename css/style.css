@@ -82,6 +82,11 @@
   color: var(--basic-white);
 }
 
+.dash{
+  color: var(--basic-black);
+  padding-top: 10px;
+}
+
 .main-button:hover {
   background-color: var(--medium-red);
 }
