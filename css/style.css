@@ -30,7 +30,7 @@
   --green: #63A63E;
   --light-green: #8ED78F;
   --bright-light-green: #5FBB2D;
-  --transparent: rgba(0 0 0 0.99);
+  --transparent: rgba(0, 0, 0, 0.01);
   --light-beige: #F9F5F0;
   --beige: #EAEAEA;
   --cart-shadow: rgba(0, 0, 0, 0.15);
@@ -338,7 +338,6 @@
 
 .contacts-wrap {
   margin-right: 0;
-  outline: #63A63E 1px solid;
 }
 
 .user-navigation {
@@ -409,6 +408,10 @@
   background-color: var(--basic-red);
 }
 
+.user-name-inner{
+  position: relative;
+}
+
 .user-name {
   font-size: 21px;
   line-Height: 21px;
@@ -427,7 +430,7 @@
   opacity: 0.5;
 }
 
-.user-name::after {
+.user-name-logout {
   content: "";
   position: absolute;
   width: 20px;
@@ -438,6 +441,7 @@
   right: 18px;
   background-repeat: no-repeat;
   opacity: 0.5;
+
 }
 
 .user-name::before {
@@ -453,12 +457,12 @@
   opacity: 0.5;
 }
 
-.user-name:hover::after,
+.user-name-logout:hover,
 .user-name:hover::before {
   opacity: 1;
 }
 
-.user-name:active::after,
+.user-name-logout:active,
 .user-name:active::before {
   opacity: 0.5;
 }
@@ -2212,7 +2216,7 @@
 
 .page-number-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 0 59px 0;
   padding: 0;
 }
@@ -2308,8 +2312,8 @@
 
 .modal-contacts {
   width: 620px;
-  top: 120px;
-  bottom: auto;
+  height: 430px;
+  margin: auto;
 }
 
 .modal-top-wrap {
@@ -2415,9 +2419,13 @@
 
 .map-top-bar {
   position: absolute;
-  top: 7px;
-  max-width: 940px;
+  top: 0;
+  max-width: 943px;
   z-index: 22;
+}
+
+.modal-close-map{
+  top: 25px;
 }
 
 /*оформление закза*/

@@ -16,7 +16,7 @@
 <header class="main-header">
   <div class="main-header-menu-bar">
     <div class="main-header-menu container">
-      <a class="logo-link logo" href="index.html">
+      <a class="logo-link logo">
         <img alt="Логотип Техномарт" height="18" src="img/logo-technomart.svg" width="108">
       </a>
       <div class="main-header-inner">
@@ -136,7 +136,7 @@
                 <p class="offer-slide-name">дрели</p>
                 <p class="offer-slide-text">Соседям на радость!</p>
               </div>
-              <a class="offer-catalog-link main-button" href="file:///C:/Technomart/1202789-technomart-29/catalog.html">открыть
+              <a class="offer-catalog-link main-button" href="catalog.html">открыть
                 каталог</a>
               <button class="offer-slider-control slide-left-drill" type="button"
                       aria-label="слайд перфораторы"></button>
@@ -376,7 +376,9 @@
       <p class="contacts-text">Вы можете забрать товар сами,
         заехав в наш офис:
       </p>
-      <img alt="карта" class="map" height="158" src="img/map.jpg" width="300">
+      <a class="map-link" href="https://goo.gl/maps/YTuQDRxNzwkd2xNS9">
+        <img alt="карта" class="map" height="158" src="img/map.jpg" width="300">
+      </a>
       <a class="contacts-link main-button" href="empty_page.html">заблудились? напишите нам!</a>
     </section>
   </div>
@@ -410,7 +412,7 @@
     </div>
     <div class="links-and-product container">
       <div class="footer-links">
-        <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <address class="footer-address">https://yandex.ru/maps/-/CCQ~i8vcXB</address>
         <a class="footer-phone" href="empty_page.html">+7 (812) 555-05-55</a>
       </div>
       <ul class="footer-products-list">
@@ -497,8 +499,10 @@
 <section class="modal-map-section visually-hidden">
   <h2 class="visually-hidden">карта</h2>
   <div class="modal-top-bar map-top-bar"></div>
-  <img class="modal-map-pic" src="img/modal-map.png" width="940" height="448" alt="карта с нашими координатами">
-  <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  <iframe src="https://yandex.by/map-widget/v1/-/CCQ~NCgxpC" width="937" height="465" allowfullscreen
+          title="Карта с нашими координатами">
+  </iframe>
+  <button class="modal-close modal-close-map" type="button" aria-label="Закрыть"></button>
 </section>
 
 </body>
