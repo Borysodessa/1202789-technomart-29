@@ -30,7 +30,7 @@
   --green: #63A63E;
   --light-green: #8ED78F;
   --bright-light-green: #5FBB2D;
-  --transparent: rgba(0 0 0 100);
+  --transparent: rgba(0 0 0 0.99);
   --light-beige: #F9F5F0;
   --beige: #EAEAEA;
   --cart-shadow: rgba(0, 0, 0, 0.15);
@@ -64,10 +64,10 @@
 }
 
 .page-body {
-  min-width: 940px;
+  min-width: 960px;
   min-height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 10px 0 10px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -269,7 +269,7 @@
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .online-store {
@@ -278,7 +278,7 @@
   font-style: italic;
   color: var(--basic-red);
   max-width: 1192px;
-  margin: 0 0 0 30px;
+  margin: 4px 0 0 30px;
 }
 
 .contacts-inner {
@@ -348,9 +348,18 @@
   background-color: var(--basic-white);
 }
 
+.main-user-navigation-inner{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  align-items: flex-start;
+}
+
 .sign-in {
+  display: block;
   padding: 12px 27px 12px 45px;
   position: relative;
+  margin-right: 5px;
 }
 
 .sign-in:hover,
@@ -381,6 +390,7 @@
 }
 
 .registration {
+  display: block;
   padding: 11px 24px;
   margin-left: 5px;
 }
@@ -1112,6 +1122,10 @@
 
 .new-price:active::after {
   border-left: 19px solid var(--dark-red);
+}
+
+.sorting-list :first-child a{
+  border: none;
 }
 
 .sorting-list :nth-child(4) {
