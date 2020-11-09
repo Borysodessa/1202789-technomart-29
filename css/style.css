@@ -1475,6 +1475,7 @@
   color: var(--dark-black);
   width: 200px;
   margin-bottom: 32px;
+  vertical-align: top;
 }
 
 .map {
