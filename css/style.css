@@ -2382,6 +2382,7 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  outline: none;
 }
 
 .modal-close::before,
@@ -2393,6 +2394,12 @@
   width: 19px;
   height: 3px;
   background-color: var(--basic-red);
+  outline: none;
+}
+
+.modal-close:focus::before,
+.modal-close:focus::after{
+  width: 25px;
 }
 
 .modal-close::before {
